@@ -1,0 +1,8 @@
+@import "header.scss";
+@import "sidenav.scss";
+@import "conversation.scss";
+
+html,body,#root,.App {
+    margin: 0;
+    height: 100%;
+}

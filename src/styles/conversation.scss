@@ -1,0 +1,45 @@
+.conversation-wrapper {
+    height: 100%;
+
+    .main-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+
+        .convo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .profile-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            
+                .profile-pic-wrapper {
+                    height: 100px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .messages-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .message-wrapper {
+                    background-color: lightblue;
+                    border-radius: 10px;
+
+                    .message {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
