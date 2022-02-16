@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function SideNav() {
+    const [friends, setFriends] = useState([]);
+
+    useEffect(() => {
+        setFriends([
+            "Matt Hintze",
+            "Megan Moreno",
+            "Katie Arnell",
+            "Kelly Peterson",
+        ]);
+    }, []);
+
     return (
         <div className="contacts-container">
-            <div className="contact">
-                Matt Hintze
-            </div>
-            <div className="contact">
-                Katie Arnell
-            </div>
-            <div className="contact">
-                Kelly Peterson
-            </div>
-            <div className="contact">
-                Megan Moreno
-            </div>
+            {friends.map((friend) => <div className="contact">{friend}</div>)}
         </div>
     );
 }

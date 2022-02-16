@@ -1,32 +1,68 @@
-import React from "react";
-import profile_pic from "../img/person.png"
-import Header from "../components/Header"
-import SideNav from "../components/SideNav"
+import React, { useState, useEffect } from "react";
+import Header from "../components/Header";
+import SideNav from "../components/SideNav";
+import Message from "../components/Message";
+import MessageInput from "../components/MessageInput";
+import Profile from "../components/Profile";
 
 function Conversation() {
+    const [messages, setMessages] = useState([]);
+
+    useEffect(() => {
+        setMessages([
+            {
+                from: "Michael",
+                to: "Matt",
+                text: "Hey, man! What's happening?",
+            },
+            {
+                from: "Matt",
+                to: "Michael",
+                text: "Hey, man! What's happening?",
+            },
+            {
+                from: "Michael",
+                to: "Matt",
+                text: "Hey, man! What's happening?",
+            },
+            {
+                from: "Matt",
+                to: "Michael",
+                text: "Hey, man! What's happening?",
+            },
+            {
+                from: "Michael",
+                to: "Matt",
+                text: "Hey, man! What's happening?",
+            },
+            {
+                from: "Matt",
+                to: "Michael",
+                text: "Hey, man! What's happening?",
+            },
+        ]);
+    }, []);
+
     return (
         <div className="conversation-wrapper">
-            <Header/>
-                <div className="main-container">
-                    <SideNav/>
-                    <div className="convo-container">
-                        <div className="profile-container">
-                            <div className="profile-pic-wrapper">
-                                <img src={profile_pic} alt="profile-pic" />
-                            </div>
-                            <div className="profile-name">
-                                Matt Hintze
-                            </div>
-                        </div>
-                        <div className="messages-container">
-                            <div className="message-wrapper">
-                                <div className="message">
-                                    Hey bro, what's crackin?
-                                </div>
-                            </div>
-                        </div>
+            <Header />
+            <div className="main-container">
+                <SideNav />
+                <div className="convo-container">
+                    <Profile />
+                    <div className="messages-container">
+                        {messages.map((message) => (
+                            <Message
+                                messageText={message.text}
+                                received={
+                                    message.from == "Michael" ? false : true
+                                }
+                            />
+                        ))}
                     </div>
+                    <MessageInput />
                 </div>
+            </div>
         </div>
     );
 }

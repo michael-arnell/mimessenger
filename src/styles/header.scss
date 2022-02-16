@@ -19,6 +19,11 @@
 
         a {
             text-decoration: none;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #0330e6;
+            }
         }
 
         .menu-button {

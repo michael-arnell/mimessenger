@@ -11,34 +11,12 @@
             flex-direction: column;
             align-items: center;
 
-            .profile-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-            
-                .profile-pic-wrapper {
-                    height: 100px;
-
-                    img {
-                        height: 100%;
-                    }
-                }
-            }
-
             .messages-container {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-
-                .message-wrapper {
-                    background-color: lightblue;
-                    border-radius: 10px;
-
-                    .message {
-                        padding: 15px;
-                    }
-                }
+                justify-content: flex-start;
+                width: 100%;
+                padding-top: 30px;
             }
         }
     }

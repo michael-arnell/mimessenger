@@ -1,6 +1,6 @@
 import '../styles/App.scss';
-import Login from '../pages/login';
-import Conversation from '../pages/conversation'
+import Login from '../pages/Login';
+import Conversation from '../pages/Conversation';
 
 function App() {
   return (
