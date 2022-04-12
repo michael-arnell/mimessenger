@@ -4,15 +4,15 @@ import { miApiCall } from "../util/apiWrapper";
 
 import Logo from "../img/chat.png";
 
-function Login() {
-    const [loginData, setLoginData] = useState({});
+function SignUp() {
+    const [signUpData, setSignUpData] = useState({});
 
-    const handleLogin = (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
 
         let formData = new FormData(e.target);
         console.log(Object.fromEntries(formData));
-        fetch("http://localhost:5000/login", {
+        fetch("http://localhost:5000/users/addUser", {
             body: JSON.stringify(Object.fromEntries(formData)),
             method: "POST",
             headers: {
@@ -32,10 +32,14 @@ function Login() {
                 <p className="welcome">Welcome to</p>
                 <p className="name">MiMessenger</p>
             </div>
-            <div className="right-login">
-                <h1>LOGIN</h1>
-                <form onSubmit={handleLogin} method="post">
-                    <label htmlFor="email">Username</label>
+            <div className="right-login sign-up">
+                <h1>SIGN UP</h1>
+                <form onSubmit={handleSignUp} method="post">
+                    <label htmlFor="firstName">First Name</label>
+                    <input type="text" name="firstName" />
+                    <label htmlFor="lastName">Last Name</label>
+                    <input type="text" name="lastName" />
+                    <label htmlFor="email">Email</label>
                     <input type="text" name="email" />
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" />
@@ -44,8 +48,8 @@ function Login() {
                     </button>
                 </form>
                 <p>
-                    <Link className="login-link" to="/signup">
-                        Create New Account
+                    <Link className="login-link" to="/login">
+                        Login to Existing Account
                     </Link>
                 </p>
             </div>
@@ -53,4 +57,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default SignUp;

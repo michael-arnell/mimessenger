@@ -1,12 +1,18 @@
 .message-wrapper {
-    background-color: lightblue;
+    background-color: $tertiary;
+    color: $tertiary-txt;
     border-radius: 10px;
     margin-left: 7vw;
     margin-bottom: 10px;
     width: fit-content;
+    border: 2px solid $tertiary;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    font-size: 1rem;
 
     &.received {
-        background-color: lightgray;
+        background-color: white;
+        color: $tertiary;
         align-self: flex-end;
         margin-right: 7vw;
     }

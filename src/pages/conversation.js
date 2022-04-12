@@ -9,6 +9,18 @@ function Conversation() {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
+
+            fetch("http://localhost:5000/users/getUsers", {
+                method: "GET",
+                cache: "no-cache",
+                headers: {
+                    "Accept": "application/json"
+                }
+            })
+                .then((response) => response.json())
+                .then((responseJSON) => console.log(responseJSON))
+                .catch((error) => console.log(error));
+
         setMessages([
             {
                 from: "Michael",
@@ -55,7 +67,7 @@ function Conversation() {
                             <Message
                                 messageText={message.text}
                                 received={
-                                    message.from == "Michael" ? false : true
+                                    message.from === "Michael" ? false : true
                                 }
                             />
                         ))}

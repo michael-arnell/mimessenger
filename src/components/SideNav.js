@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function SideNav() {
     const [friends, setFriends] = useState([]);
@@ -14,7 +15,9 @@ function SideNav() {
 
     return (
         <div className="contacts-container">
-            {friends.map((friend) => <div className="contact">{friend}</div>)}
+            {friends.map((friend, index) => (<Link to="/messages" key={index}>
+                <div className="contact">{friend}</div>
+            </Link>))}
         </div>
     );
 }

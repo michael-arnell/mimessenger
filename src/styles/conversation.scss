@@ -3,13 +3,15 @@
 
     .main-container {
         height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 4fr;
+        display: flex;
 
         .convo-container {
+            background-color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 80%;
+            z-index: -2;
 
             .messages-container {
                 display: flex;

@@ -1,9 +1,11 @@
+@import "theme.scss";
 @import "header.scss";
 @import "sidenav.scss";
 @import "conversation.scss";
 @import "profile.scss";
 @import "message.scss";
 @import "messageInput.scss";
+@import "login.scss";
 
 html,body,#root,.App {
     margin: 0;

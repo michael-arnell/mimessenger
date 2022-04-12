@@ -1,12 +1,16 @@
 .header-container {
     display: flex;
+    width: 101vw;
+    margin-left: -1vw;
     justify-content: space-between;
     align-items: center;
-    background-color: #2e58ff;
-    padding: 10px;
+    background-color: $secondary;
+    padding: 10px 2vw;
+    box-shadow: 0px 2px 5px -2px black;
+    z-index: 2;
 
     .logo-wrapper {
-        height: 50px;
+        height: 60px;
 
         img {
             height: 100%;
@@ -22,13 +26,13 @@
             border-radius: 10px;
 
             &:hover {
-                background-color: #0330e6;
+                background-color: $secondary-light;
             }
         }
 
         .menu-button {
             margin: 10px;
-            color: white;
+            color: $primary-txt;
         }
     }
 }
