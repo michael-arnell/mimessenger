@@ -1,20 +1,21 @@
 .message-wrapper {
-    background-color: $tertiary;
-    color: $tertiary-txt;
-    border-radius: 10px;
-    margin-left: 7vw;
+    background-color: $tertiary-trsp;
+    color: $primary-txt;
+    border-radius: 30px;
     margin-bottom: 10px;
     width: fit-content;
-    border: 2px solid $tertiary;
-    font-weight: 600;
+    // border: 2px solid $tertiary;
+    font-weight: 400;
     letter-spacing: .1rem;
     font-size: 1rem;
+    margin: 30px 30vw 0 0;
+    box-shadow: 2px 2px 5px -2px black;
 
     &.received {
-        background-color: white;
-        color: $tertiary;
-        align-self: flex-end;
-        margin-right: 7vw;
+        background-color: rgba($primary, .5);
+        color: $primary-txt;
+        // border: 2px solid rgba($primary, .5);
+        margin: 30px 0 0 30vw;
     }
 
     .message {

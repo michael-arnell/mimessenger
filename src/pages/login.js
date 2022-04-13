@@ -16,7 +16,7 @@ function Login() {
             body: JSON.stringify(Object.fromEntries(formData)),
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
         })
             .then((response) => console.log(response))
@@ -48,6 +48,18 @@ function Login() {
                         Create New Account
                     </Link>
                 </p>
+            </div>
+            <div className="attribution">
+                {" "}
+                Icons made by{" "}
+                <a href="https://www.freepik.com" title="Freepik">
+                    {" "}
+                    Freepik{" "}
+                </a>{" "}
+                from{" "}
+                <a href="https://www.flaticon.com/" title="Flaticon">
+                    www.flaticon.com'
+                </a>
             </div>
         </div>
     );

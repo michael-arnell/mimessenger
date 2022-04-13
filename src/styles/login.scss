@@ -9,8 +9,8 @@
         url("../img/friends.jpg");
     background-size: cover;
     background-position-y: 5%;
-    height: calc(100% - 20px);
-    width: 100%;
+    height: calc(100vh - 20px);
+    width: 100vw;
     padding-top: 20px;
 
     .logo {
@@ -122,5 +122,10 @@
             margin: 10px;
             color: black;
         }
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
     }
 }

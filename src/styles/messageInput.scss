@@ -1,19 +1,43 @@
 .message-input {
+    position: fixed;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: fit-content;
+    background-color: white;
 
-    textarea {
-        border-color: lightgray;
-        background-color: white;
-        border-radius: 10px;
-        height: 80%;
-        width: 50vw;
-        margin: 50px 0 0 0;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 5px;
-        resize: none;
+    form {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            border: 2px solid darkgray;
+            background-color: white;
+            border-radius: 20px;
+            height: 80px;
+            width: 60vw;
+            margin: 15px 0 15px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            resize: none;
+        }
+
+        button {
+            margin-bottom: 15px;
+            width: 140px;
+            height: 55px;
+            align-self: flex-end;
+            background-color: $secondary;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 2px 2px 5px -2px black;
+            font-size: 1.1rem;
+
+            &:hover {
+                background-color: $secondary-light;
+            }
+        }
     }
 }

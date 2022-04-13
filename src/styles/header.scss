@@ -1,16 +1,15 @@
 .header-container {
     display: flex;
-    width: 101vw;
-    margin-left: -1vw;
     justify-content: space-between;
     align-items: center;
     background-color: $secondary;
-    padding: 10px 2vw;
+    padding: 10px;
     box-shadow: 0px 2px 5px -2px black;
-    z-index: 2;
+    position: relative;
 
     .logo-wrapper {
         height: 60px;
+        padding: 10px 10px 10px 20px;
 
         img {
             height: 100%;
@@ -20,19 +19,26 @@
     .menu-buttons {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         a {
             text-decoration: none;
+        }
+
+        .menu-button {
+            margin: 0 10px;
+            padding: 20px 0;
+            width: 100px;
+            text-align: center;
+            color: $quaternary;
+            font-size: 1.2rem;
+            font-weight: 600;
             border-radius: 10px;
 
             &:hover {
                 background-color: $secondary-light;
+                color: $primary-txt;
             }
-        }
-
-        .menu-button {
-            margin: 10px;
-            color: $primary-txt;
         }
     }
 }
