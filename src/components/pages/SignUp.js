@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { miApiCall } from "../util/apiWrapper";
+import { miApiCall } from "../../util/apiWrapper";
 
-import Logo from "../img/chat.png";
+import Logo from "../../img/chat.png";
 
 function SignUp() {
     const [signUpData, setSignUpData] = useState({});

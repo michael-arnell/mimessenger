@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header";
-import SideNav from "../components/SideNav";
-import Message from "../components/Message";
-import MessageInput from "../components/MessageInput";
-import Profile from "../components/Profile";
+import Header from "../Header";
+import SideNav from "../SideNav";
+import Message from "../Message";
+import MessageInput from "../MessageInput";
+import Profile from "../Profile";
 
 function Conversation() {
     const [messages, setMessages] = useState([]);

@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "../styles/App.scss";
-import Login from "../pages/Login";
-import SignUp from "../pages/SignUp";
-import Conversation from "../pages/Conversation";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Conversation from "./pages/Conversation";
 
 function App() {
     return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { miApiCall } from "../util/apiWrapper";
+import { miApiCall } from "../../util/apiWrapper";
 
-import Logo from "../img/chat.png";
+import Logo from "../../img/chat.png";
 
 function Login() {
     const [loginData, setLoginData] = useState({});
@@ -29,7 +29,7 @@ function Login() {
                 <img className="logo" src={Logo} alt="" />
             </div>
             <div className="left-login">
-                <p className="welcome">Welcome to</p>
+                {/* <p className="welcome">Welcome to</p> */}
                 <p className="name">MiMessenger</p>
             </div>
             <div className="right-login">
