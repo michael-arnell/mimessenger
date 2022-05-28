@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { miApiCall } from "../../util/apiWrapper";
 
@@ -12,15 +12,17 @@ function Login() {
 
         let formData = new FormData(e.target);
         console.log(Object.fromEntries(formData));
-        fetch("http://localhost:5000/login", {
-            body: JSON.stringify(Object.fromEntries(formData)),
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((response) => console.log(response))
-            .catch((error) => console.log(error));
+        let auth = miApiCall("http://localhost:5000/login","POST",JSON.stringify(Object.fromEntries(formData)));
+        console.log(auth);
+        // fetch("http://localhost:5000/login", {
+        //     body: JSON.stringify(Object.fromEntries(formData)),
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        // })
+        //     .then((response) => console.log(response))
+        //     .catch((error) => console.log(error));
     };
 
     return (

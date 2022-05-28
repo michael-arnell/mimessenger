@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import profilePic from "../img/person.png";
 
 function Profile(props) {

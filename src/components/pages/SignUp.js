@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { miApiCall } from "../../util/apiWrapper";
 
@@ -11,7 +11,6 @@ function SignUp() {
         e.preventDefault();
 
         let formData = new FormData(e.target);
-        console.log(Object.fromEntries(formData));
         fetch("http://localhost:5000/users/addUser", {
             body: JSON.stringify(Object.fromEntries(formData)),
             method: "POST",
